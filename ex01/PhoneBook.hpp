@@ -3,30 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pringles <pringles@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:42:09 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/08 19:45:58 by pringles         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:25:08 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-#include <iostream>
-#include <string>
-#include "Contact.hpp"
+# include "Contact.hpp"
 
 class PhoneBook {
-	private :
+	private	:
 		Contact contacts[8];
-	public :
-		void ADD(void);
-		void SEARCH(void);
-		void exit(void);
-		
-}
+		int		_index;
+	public	:
+		//Constructor
+		PhoneBook();
+		//Destructor
+		~PhoneBook();
+		//Methods
+		void ADD();
+		void SEARCH();
+};
 
-#include "PhoneBook.cpp"
+# include "PhoneBook.cpp"
 
 #endif
