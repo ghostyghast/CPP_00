@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:35:39 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/10 17:38:30 by amaligno         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:23:20 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,43 @@ string	check_field(string message){
 		getline(cin, str);
 	}
 	return (str);
+}
+
+string	print_spaces(int n)
+{
+	string	str = "";
+	for (int i = 0; i < n; i++)
+		str += " ";
+	return(str);
+}
+
+string	print_column(string content)
+{
+	string str;
+	int len = content.length();
+
+	if (len == 10)
+		str = content;
+	else if (len < 10)	
+		str = print_spaces(10 - len) + content;
+	else
+	{
+		content.resize(9);
+		str = content + ".";
+	}
+	return (str);
+}
+
+void	print_contact(Contact contact)
+{
+	if (contact.get_first_name().empty())
+	{
+		cout << "Empty Contact\n";
+		return ;
+	}
+	cout << "First name :" << contact.get_first_name() << '\n'
+		 << "Last Name :" << contact.get_last_name()<< '\n'
+		 << "Nickname :" << contact.get_nickname()<< '\n'
+		 << "Darkest Secret" << contact.get_darkest_secret()<< '\n'
+		 << "Phone Number :" << contact.get_phone_number()<< '\n';
 }

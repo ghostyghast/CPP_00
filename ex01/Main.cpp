@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:42:34 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/10 17:39:05 by amaligno         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:13:47 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(void)
 	{
 		if (input == "ADD")
 			phone.ADD();
-		else if (input.compare("SEARCH"))
+		else if (input == "SEARCH")
 			phone.SEARCH();
 		else
 			cout << "Invalid command :(" << '\n';

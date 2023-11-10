@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:42:09 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/10 16:44:36 by amaligno         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:12:54 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 class PhoneBook {
 	private	:
-		Contact contacts[8];
 		int		_index;
+		Contact _contacts[8];
 	public	:
 		//Constructor
 		PhoneBook(void);
