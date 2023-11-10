@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:42:22 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/09 16:50:27 by amaligno         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:30:58 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 using std::string;
 using std::cout;
 using std::cin;
+using std::getline;
 
 class Contact {
     private :
@@ -43,7 +44,5 @@ class Contact {
         
         
 };
-
-# include "Contact.cpp"
 
 #endif

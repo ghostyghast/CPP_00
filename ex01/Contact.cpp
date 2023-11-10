@@ -6,12 +6,9 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:14:10 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/09 16:52:32 by amaligno         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:45:08 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef CONTACT_CPP
-# define CONTACT_CPP
 
 # include "Contact.hpp"
 
@@ -54,5 +51,3 @@ void	Contact::set_darkest_secret(string str){
 void	Contact::set_phone_number(string str){
 	this->_phone_number = str;
 }
-
-#endif

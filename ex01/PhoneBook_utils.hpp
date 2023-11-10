@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook_utils.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 18:42:09 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/10 16:44:36 by amaligno         ###   ########.fr       */
+/*   Created: 2023/11/10 16:32:07 by amaligno          #+#    #+#             */
+/*   Updated: 2023/11/10 16:37:33 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef PHONEBOOK_UTILS_HPP
+# define PHONEBOOK_UTILS_HPP
 
-# include "Contact.hpp"
+# include "PhoneBook.hpp"
 
-class PhoneBook {
-	private	:
-		Contact contacts[8];
-		int		_index;
-	public	:
-		//Constructor
-		PhoneBook(void);
-		//Destructor
-		~PhoneBook(void);
-		//Methods
-		void ADD(void);
-		void SEARCH(void);
-};
+string	check_field(string message);
+bool	has_alpha(string str);
 
 #endif
