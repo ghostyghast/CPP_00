@@ -6,7 +6,7 @@ NAME = phonebook
 
 CC = c++
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
 %.o: %.cpp
 	@$(CC) $(FLAGS) -c $< -o $@

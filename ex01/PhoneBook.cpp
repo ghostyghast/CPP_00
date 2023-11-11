@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:14:06 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/10 19:28:52 by amaligno         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:44:38 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,15 @@ void	PhoneBook::ADD(void){
 void	PhoneBook::SEARCH(void){
 	string	str;
 
+	if (!this->_contacts[0].get_first_name().size())
+	{
+		cout << "You have no friends :(\n";
+		return ;
+	}
 	cout << "---------------------------------------------" << '\n'
 		 << "|     Index|  Fst Name|  Lst Name|  Nickname|" << '\n'
 		 << "---------------------------------------------" << '\n';
-	for (int i = 0; this->_contacts[i].get_first_name().size() && i < 8; i++)
+	for (int i = 0; i < 8 && this->_contacts[i].get_first_name().size(); i++)
 	{
 		cout << '|' << print_spaces(9) << i
 			 << '|' << print_column(this->_contacts[i].get_first_name())
@@ -57,5 +62,5 @@ void	PhoneBook::SEARCH(void){
 			 << ">> ";
 		getline(cin, str);
 	}
-	print_contact(this->_contacts['0' - str[0]]);
+	print_contact(this->_contacts[str[0] - '0']);
 }

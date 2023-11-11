@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook_utils.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:35:39 by amaligno          #+#    #+#             */
-/*   Updated: 2023/11/10 19:23:20 by amaligno         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:32:43 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,14 +78,14 @@ string	print_column(string content)
 
 void	print_contact(Contact contact)
 {
-	if (contact.get_first_name().empty())
+	if (!contact.get_first_name().size())
 	{
 		cout << "Empty Contact\n";
 		return ;
 	}
-	cout << "First name :" << contact.get_first_name() << '\n'
-		 << "Last Name :" << contact.get_last_name()<< '\n'
-		 << "Nickname :" << contact.get_nickname()<< '\n'
-		 << "Darkest Secret" << contact.get_darkest_secret()<< '\n'
-		 << "Phone Number :" << contact.get_phone_number()<< '\n';
+	cout << "First name : " << contact.get_first_name() << '\n'
+		 << "Last Name : " << contact.get_last_name()<< '\n'
+		 << "Nickname : " << contact.get_nickname()<< '\n'
+		 << "Darkest Secret : " << contact.get_darkest_secret()<< '\n'
+		 << "Phone Number : " << contact.get_phone_number()<< '\n';
 }
