@@ -4,7 +4,7 @@ OBJ = $(SRC:.cpp=.o)
 
 NAME = account
 
-CC = c++
+CC = g++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
